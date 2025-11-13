@@ -11,9 +11,9 @@ class Display:  # ← クラス（設計図）を定義
             print(i+1, end=" ")
             for j in range(board.size): #列
                 if board.grid[i][j] == 1:
-                    print("B", end=" ")
-                elif board.grid[i][j]  == -1:
                     print("W", end=" ")
+                elif board.grid[i][j]  == -1:
+                    print("B", end=" ")
                 elif board.grid[i][j] == 0:
                     print("…", end=" ")
                 else:

@@ -35,6 +35,16 @@ class Board:  # ← クラス（設計図）を定義
                    print("エラーが発生しました!!")
 
         return white_count , black_count
+    
+    def copy(self):
+        new_board = Board()
+        new_board.size = self.size
+        # 盤面データ（grid）を1行ずつコピーする（重要）
+        new_board.grid = []
+        for row in self.grid:
+            new_board.grid.append(row.copy())
+
+        return new_board
                 
 
              
